@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+</head>
+<body>
+
+  <h1>Photo Gallery</h1>
+
+  <% images.forEach(image => { %>
+    <img src="/images/<%= image %>" width="200" />
+  <% }) %>
+
+</body>
+</html>
