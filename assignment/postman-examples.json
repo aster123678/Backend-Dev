@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "Student Management System API Examples",
+    "_postman_id": "7c045768-3e2a-4dae-9f49-7f21b5af0001",
+    "description": "Postman JSON examples for the Student Management System project.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Add Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ananya Verma\",\n  \"email\": \"ananya.verma@example.com\",\n  \"age\": 20,\n  \"gpa\": 3.7,\n  \"courses\": [\"Mathematics\", \"Database Systems\"],\n  \"city\": \"Pune\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["students"]
+        }
+      }
+    },
+    {
+      "name": "Get All Students",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["students"]
+        }
+      }
+    },
+    {
+      "name": "Get Student By Email",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/students/email/ananya.verma@example.com",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["students", "email", "ananya.verma@example.com"]
+        }
+      }
+    },
+    {
+      "name": "Update Student GPA",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"gpa\": 3.9\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/students/{{studentId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["students", "{{studentId}}"]
+        }
+      }
+    },
+    {
+      "name": "Delete Student",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/students/{{studentId}}",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["students", "{{studentId}}"]
+        }
+      }
+    }
+  ]
+}
