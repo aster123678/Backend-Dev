@@ -1,0 +1,17 @@
+{
+  "name": "middleware-practice-exercises",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "exercise1": "node exercise-1-request-logging/app.js",
+    "exercise2": "node exercise-2-multi-factor-auth/app.js",
+    "exercise3": "node exercise-3-user-activity-tracker/app.js",
+    "exercise4": "node exercise-4-soft-delete-system/app.js",
+    "exercise5": "node exercise-5-data-sanitization/app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.2"
+  }
+}

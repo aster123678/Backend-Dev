@@ -1,0 +1,17 @@
+{
+  "name": "session-cookie-practice-exercises",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "exercise1": "node exercise-1-multi-step-form/app.js",
+    "exercise2": "node exercise-2-language-preference/app.js",
+    "exercise3": "node exercise-3-secure-admin-panel/app.js",
+    "exercise4": "node exercise-4-session-timeout-warning/app.js",
+    "exercise5": "node exercise-5-anonymous-vs-authenticated-cart/app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^4.19.2",
+    "express-session": "^1.18.1"
+  }
+}
