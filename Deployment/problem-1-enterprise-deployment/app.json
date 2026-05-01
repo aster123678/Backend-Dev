@@ -1,0 +1,23 @@
+{
+  "name": "enterprise-transaction-service",
+  "description": "Development and staging Heroku deployment for the enterprise transaction service",
+  "repository": "https://example.com/enterprise-transaction-service",
+  "keywords": ["node", "express", "mongodb", "heroku"],
+  "stack": "heroku-22",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "env": {
+    "NODE_ENV": { "required": true },
+    "APP_ENV": { "required": true },
+    "MONGODB_URI": { "required": true },
+    "LOG_LEVEL": { "required": true },
+    "SESSION_SECRET": { "required": true },
+    "AUDIT_LOG_ENABLED": { "required": true }
+  },
+  "addons": ["papertrail", "mongolab"]
+}
+

@@ -1,0 +1,19 @@
+{
+  "name": "peak-ecommerce-platform",
+  "description": "Black Friday/Cyber Monday scalable Heroku deployment",
+  "stack": "heroku-22",
+  "formation": {
+    "web": { "quantity": 10, "size": "performance-l" },
+    "worker": { "quantity": 4, "size": "performance-m" }
+  },
+  "env": {
+    "NODE_ENV": { "value": "production" },
+    "MONGODB_URI": { "required": true },
+    "REDIS_URL": { "required": true },
+    "PAYMENT_GATEWAY_URL": { "required": true },
+    "CDN_BASE_URL": { "required": true },
+    "SMS_ALERT_WEBHOOK": { "required": true }
+  },
+  "addons": ["heroku-redis:premium-7", "papertrail", "newrelic"]
+}
+

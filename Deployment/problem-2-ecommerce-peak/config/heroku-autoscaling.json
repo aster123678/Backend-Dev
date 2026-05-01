@@ -1,0 +1,37 @@
+{
+  "baseline": {
+    "webDynos": 10,
+    "workerDynos": 4
+  },
+  "peak": {
+    "maxWebDynos": 500,
+    "maxWorkerDynos": 100,
+    "budgetUsd": 50000
+  },
+  "rules": [
+    {
+      "metric": "p95_response_time_ms",
+      "scaleOutAbove": 750,
+      "scaleInBelow": 350,
+      "cooldownSeconds": 180
+    },
+    {
+      "metric": "requests_per_minute",
+      "scaleOutAbove": 10000,
+      "scaleInBelow": 5000,
+      "cooldownSeconds": 120
+    },
+    {
+      "metric": "checkout_queue_depth",
+      "scaleOutAbove": 10000,
+      "scaleInBelow": 1000,
+      "cooldownSeconds": 120
+    }
+  ],
+  "postPeak": {
+    "scaleDownAt": "Tuesday 06:00 local business time",
+    "targetWebDynos": 10,
+    "targetWorkerDynos": 4
+  }
+}
+

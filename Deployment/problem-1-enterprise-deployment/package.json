@@ -1,0 +1,23 @@
+{
+  "name": "enterprise-transaction-deployment",
+  "version": "1.0.0",
+  "description": "Practice Problem 1: multi-environment enterprise deployment solution",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "health": "node -e \"fetch('http://localhost:3000/health').then(r=>r.json()).then(console.log)\"",
+    "syntax": "node --check src/server.js && node --check src/config/index.js && node --check src/config/database.js && node --check src/config/logger.js && node --check src/routes/health.js && node --check src/routes/metrics.js"
+  },
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
+    "helmet": "^7.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3"
+  }
+}
+
